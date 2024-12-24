@@ -1,4 +1,3 @@
-import JSZip from "jszip";
 import { loadScript } from "./utils.js";
 import { QChain } from "./lib/QChain/QChain.js";
 import { AppWindow } from "./components/web/AppWindow.js";
@@ -6,6 +5,13 @@ import { AppWindow } from "./components/web/AppWindow.js";
 const virtualfs = await loadScript(
   import.meta.resolve("./lib/matrixai-virtualfs/virtualfs.js"),
   "virtualfs",
+).catch((err) => {
+  console.error(err);
+  return null;
+});
+const JSZip = await loadScript(
+  import.meta.resolve("./lib/stuk-jszip/jszip.js"),
+  "JSZip",
 ).catch((err) => {
   console.error(err);
   return null;

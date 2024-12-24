@@ -1,6 +1,6 @@
 // jshint -W030
-import Sandbox from "@nyariv/sandboxjs";
-import DOMPurify from "dompurify";
+import Sandbox from "../../lib/nyariv-sandboxjs/Sandbox.js";
+import DOMPurify from "../../lib/cure53-dompurify/purify.es.mjs";
 import { QChain } from "../../lib/QChain/QChain.js";
 
 class AppWindow extends HTMLElement {
